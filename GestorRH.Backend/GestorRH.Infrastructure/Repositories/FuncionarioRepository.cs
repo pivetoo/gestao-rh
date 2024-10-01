@@ -24,6 +24,11 @@ namespace GestorRH.Infrastructure.Repositories
             return await _context.Funcionarios.FindAsync(id);
         }
 
+        public async Task<Funcionario> ObterPeloEmail(string email)
+        {
+            return await _context.Funcionarios.FirstOrDefaultAsync(m => m.Email == email);
+        }
+
         public async Task<Funcionario> ObterPorCpf(string cpf)
         {
             return await _context.Funcionarios.FirstOrDefaultAsync(f => f.Cpf == cpf);
@@ -46,6 +51,11 @@ namespace GestorRH.Infrastructure.Repositories
             var funcionario = await ObterPorId(id);
             _context.Funcionarios.Remove(funcionario);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<int> ContarFuncionarios()
+        {
+            return await _context.Funcionarios.CountAsync();
         }
     }
 }

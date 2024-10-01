@@ -8,11 +8,10 @@
         public DateTime DataInicio { get; private set; }
         public DateTime DataFim { get; private set; }
 
-        public Ferias(int id, int funcionarioId, Funcionario funcionario, DateTime dataInicio, DateTime dataFim)
+        public Ferias(int id, int funcionarioId, DateTime dataInicio, DateTime dataFim)
         {
             Id = id;
             FuncionarioId = funcionarioId;
-            Funcionario = funcionario;
             DataInicio = dataInicio;
             DataFim = dataFim;
         }

@@ -18,16 +18,14 @@ namespace GestorRH.Dominio.Tools
             {
             new Claim(ClaimTypes.NameIdentifier, funcionario.Id.ToString()),
             new Claim(ClaimTypes.Name, funcionario.Nome),
-            new Claim(ClaimTypes.Role, funcionario.isAdmin ? "Admin" : "User")
-        };
+            new Claim(ClaimTypes.Role, funcionario.IsAdmin ? "Admin" : "User")
+            };
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddHours(2),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
-                Issuer = configuration["Jwt:Issuer"],
-                Audience = configuration["Jwt:Audience"]
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
@@ -45,11 +43,10 @@ namespace GestorRH.Dominio.Tools
                 {
                 new Claim(ClaimTypes.NameIdentifier, userId),
                 new Claim(ClaimTypes.Email, userEmail)
-            }),
+                }),
+
                 Expires = DateTime.UtcNow.AddHours(int.Parse(configuration["Jwt:ExpireHours"])),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
-                Issuer = configuration["Jwt:Issuer"],
-                Audience = configuration["Jwt:Audience"]
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
@@ -67,10 +64,8 @@ namespace GestorRH.Dominio.Tools
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidIssuer = configuration["Jwt:Issuer"],
-                    ValidAudience = configuration["Jwt:Audience"],
+                    ValidateIssuer = false,
+                    ValidateAudience = false,                                        
                     ClockSkew = TimeSpan.Zero
                 }, out SecurityToken validatedToken);
 

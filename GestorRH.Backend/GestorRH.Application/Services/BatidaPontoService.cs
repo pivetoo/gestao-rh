@@ -15,9 +15,16 @@ namespace GestorRH.Application.Services
             _batidaPontoRepository = batidaPontoRepository;
         }
 
-        public Task<IEnumerable<BatidaPontoDTO>> ObterTodasBatidasPonto()
+        public async Task<IEnumerable<BatidaPontoDTO>> ObterTodasBatidasPonto()
         {
-            throw new NotImplementedException();
+            var batidas = await _batidaPontoRepository.ObterTodos();
+            return batidas.Select(b => new BatidaPontoDTO
+            {
+                Id = b.Id,
+                FuncionarioId = b.FuncionarioId,
+                DataHora = b.DataHora,
+                TipoBatida = b.TipoBatida.ToString()                
+            });
         }
 
         public async Task<IEnumerable<BatidaPontoDTO>> ObterBatidaPontoPorFuncionarioId(int funcionarioId)

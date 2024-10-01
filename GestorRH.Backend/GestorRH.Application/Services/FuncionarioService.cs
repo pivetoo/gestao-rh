@@ -29,7 +29,7 @@ namespace GestorRH.Application.Services
             });
         }
 
-        public async Task<FuncionarioDTO> ObterFuncionariosPorId(int id)
+        public async Task<FuncionarioDTO> ObterFuncionarioPorId(int id)
         {
             var funcionario = await _funcionarioRepository.ObterPorId(id);
 
@@ -42,6 +42,11 @@ namespace GestorRH.Application.Services
                 Email = funcionario.Email,
                 Telefone = funcionario.Telefone
             };
+        }
+
+        public async Task<Funcionario> ObterFuncionarioPeloEmail(string email)
+        {
+            return await _funcionarioRepository.ObterPeloEmail(email);
         }
 
         public async Task<FuncionarioDTO> ObterFuncionarioPorCpf(string cpf)
@@ -95,6 +100,11 @@ namespace GestorRH.Application.Services
         public async Task RemoverFuncionario(int id)
         {
             await _funcionarioRepository.Remover(id);
+        }
+
+        public async Task<int> ContarFuncionarios()
+        {
+            return await _funcionarioRepository.ContarFuncionarios();
         }
     }
 }

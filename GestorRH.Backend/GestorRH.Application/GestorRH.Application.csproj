@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GestorRH.API\GestorRH.API.csproj" />
     <ProjectReference Include="..\GestorRH.Dominio\GestorRH.Dominio.csproj" />
   </ItemGroup>
 
