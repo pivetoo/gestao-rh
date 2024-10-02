@@ -25,7 +25,7 @@ namespace GestorRH.IoC.Configuration
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseNpgsql(configuration.GetConnectionString("DefaultConneciton"));
+                options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
             });
 
             return services;
