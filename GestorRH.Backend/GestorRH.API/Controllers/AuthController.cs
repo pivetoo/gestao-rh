@@ -26,39 +26,12 @@ namespace GestorRH.API.Controllers
             if (funcionario == null)
             {
                 return Unauthorized("Usuário ou senha inválidos.");
-            }
-
-            CookieOptions options = new CookieOptions
-            {
-                HttpOnly = true,
-                Expires = DateTime.Now.AddMinutes(30)
-            };
-
+            }            
             var token = JwtToken.GerarToken(funcionario, _configuration);
-
-            Response.Cookies.Append("AuthToken", token, options);
 
             var isAdmin = funcionario.IsAdmin;
 
             return Ok(new { token, isAdmin });
-        }
-
-        [HttpGet("perfil")]
-        public IActionResult GetCookie()
-        {
-            if (Request.Cookies.TryGetValue("AuthToken", out string token))
-            {
-                return Ok(new { token });
-            }
-
-            return Unauthorized("Token de autenticação não encontrado.");
-        }
-
-        [HttpPost("logout")]
-        public IActionResult Logout()
-        {
-            Response.Cookies.Delete("AuthToken");
-            return Ok(new { mensagem = "Logout realizado com sucesso!" });
         }
     }
 }

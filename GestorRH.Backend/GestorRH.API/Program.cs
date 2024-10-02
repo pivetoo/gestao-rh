@@ -43,12 +43,6 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = false,
         ClockSkew = TimeSpan.Zero
     };
-})
-.AddCookie(options =>
-{
-    options.AccessDeniedPath = new PathString("/Account/SignIn");
-    options.LoginPath = new PathString("/Account/SignIn");
-    options.LogoutPath = new PathString("/Home/SignOut");
 });
 
 builder.Services.AddControllers().AddJsonOptions(options =>
@@ -57,19 +51,13 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
 });
 
-builder.Services.Configure<CookiePolicyOptions>(options =>
-{
-    options.CheckConsentNeeded = context => true;
-    options.MinimumSameSitePolicy = SameSiteMode.Strict;
-});
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(b => b.AddDefaultPolicy(c =>
-        c.AllowAnyMethod()
-         .AllowAnyHeader()
-         .AllowAnyOrigin()));
+    c.AllowAnyMethod()
+     .AllowAnyHeader()
+     .AllowAnyOrigin()));
 
 var app = builder.Build();
 
@@ -82,18 +70,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
-
-app.UseCookiePolicy();
-
-app.Use(async (context, next) =>
-{
-    var JWToken = context.Session.GetString("JWToken");
-    if (!string.IsNullOrEmpty(JWToken))
-    {
-        context.Request.Headers.Add("Authorization", "Bearer " + JWToken);
-    }
-    await next();
-});
 
 app.UseCors();
 
