@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorRH.Dominio", "GestorRH.Dominio\GestorRH.Dominio.csproj", "{08E8FC39-6959-438B-A129-50245645CE6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorRH.Dominio", "GestorRH.Dominio\GestorRH.Dominio.csproj", "{08E8FC39-6959-438B-A129-50245645CE6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorRH.Infrastructure", "GestorRH.Infrastructure\GestorRH.Infrastructure.csproj", "{86293EB3-6BA4-457A-A1C9-B9308C5D0AFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorRH.Infrastructure", "GestorRH.Infrastructure\GestorRH.Infrastructure.csproj", "{86293EB3-6BA4-457A-A1C9-B9308C5D0AFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorRH.API", "GestorRH.API\GestorRH.API.csproj", "{B3A657ED-09CF-4211-8AE0-327F82AE564C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorRH.API", "GestorRH.API\GestorRH.API.csproj", "{B3A657ED-09CF-4211-8AE0-327F82AE564C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorRH.Application", "GestorRH.Application\GestorRH.Application.csproj", "{A6EB3ECC-F716-4499-A806-6FAAAB2DB8F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorRH.Application", "GestorRH.Application\GestorRH.Application.csproj", "{A6EB3ECC-F716-4499-A806-6FAAAB2DB8F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorRH.UnitTests", "GestorRH.UnitTests\GestorRH.UnitTests.csproj", "{EC6361F9-F58E-4D4D-881B-4BE3899A29B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorRH.IoC", "GestorRH.IoC\GestorRH.IoC.csproj", "{A13D2A2A-7B71-4E18-8AFE-895324E45723}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{A6EB3ECC-F716-4499-A806-6FAAAB2DB8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6EB3ECC-F716-4499-A806-6FAAAB2DB8F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6EB3ECC-F716-4499-A806-6FAAAB2DB8F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6361F9-F58E-4D4D-881B-4BE3899A29B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6361F9-F58E-4D4D-881B-4BE3899A29B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6361F9-F58E-4D4D-881B-4BE3899A29B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6361F9-F58E-4D4D-881B-4BE3899A29B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13D2A2A-7B71-4E18-8AFE-895324E45723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13D2A2A-7B71-4E18-8AFE-895324E45723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13D2A2A-7B71-4E18-8AFE-895324E45723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13D2A2A-7B71-4E18-8AFE-895324E45723}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
