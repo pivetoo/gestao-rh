@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\GestorRH.Application\GestorRH.Application.csproj" />
     <ProjectReference Include="..\GestorRH.Infrastructure\GestorRH.Infrastructure.csproj" />
+    <ProjectReference Include="..\GestorRH.IoC\GestorRH.IoC.csproj" />
   </ItemGroup>
 
 </Project>

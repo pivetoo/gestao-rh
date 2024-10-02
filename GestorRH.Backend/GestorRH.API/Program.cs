@@ -1,31 +1,14 @@
-using GestorRH.Application.Interfaces;
-using GestorRH.Application.Services;
-using GestorRH.Dominio.Interfaces;
-using GestorRH.Infrastructure.Data;
-using GestorRH.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Text.Json.Serialization;
+using GestorRH.IoC.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var configuration = builder.Configuration;
 
-var connectionString = configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(connectionString));
-
-builder.Services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
-builder.Services.AddScoped<IDepartamentoRepository, DepartamentoRepository>();
-builder.Services.AddScoped<ICargoRepository, CargoRepository>();
-builder.Services.AddScoped<IBatidaPontoRepository, BatidaPontoRepository>();
-
-builder.Services.AddScoped<IFuncionarioService, FuncionarioService>();
-builder.Services.AddScoped<IDepartamentoService, DepartamentoService>();
-builder.Services.AddScoped<ICargoService, CargoService>();
-builder.Services.AddScoped<IBatidaPontoService, BatidaPontoService>();
+builder.Services.AddDependencyInjection(configuration);
 
 builder.Services.AddAuthentication(options =>
 {
