@@ -18,16 +18,6 @@ namespace GestorRH.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Funcionario>()
-                .HasOne(f => f.Cargo)
-                .WithMany()
-                .HasForeignKey(f => f.CargoId);
-
-            modelBuilder.Entity<BatidaPonto>()
-                .HasOne(bp => bp.Funcionario)
-                .WithMany()
-                .HasForeignKey(bp => bp.FuncionarioId);
         }
     }
 }

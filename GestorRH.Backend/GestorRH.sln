@@ -11,9 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorRH.API", "GestorRH.AP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorRH.Application", "GestorRH.Application\GestorRH.Application.csproj", "{A6EB3ECC-F716-4499-A806-6FAAAB2DB8F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorRH.UnitTests", "GestorRH.UnitTests\GestorRH.UnitTests.csproj", "{EC6361F9-F58E-4D4D-881B-4BE3899A29B3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorRH.IoC", "GestorRH.IoC\GestorRH.IoC.csproj", "{A13D2A2A-7B71-4E18-8AFE-895324E45723}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorRH.IoC", "GestorRH.IoC\GestorRH.IoC.csproj", "{A13D2A2A-7B71-4E18-8AFE-895324E45723}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +35,6 @@ Global
 		{A6EB3ECC-F716-4499-A806-6FAAAB2DB8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6EB3ECC-F716-4499-A806-6FAAAB2DB8F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6EB3ECC-F716-4499-A806-6FAAAB2DB8F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC6361F9-F58E-4D4D-881B-4BE3899A29B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC6361F9-F58E-4D4D-881B-4BE3899A29B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC6361F9-F58E-4D4D-881B-4BE3899A29B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC6361F9-F58E-4D4D-881B-4BE3899A29B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A13D2A2A-7B71-4E18-8AFE-895324E45723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A13D2A2A-7B71-4E18-8AFE-895324E45723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A13D2A2A-7B71-4E18-8AFE-895324E45723}.Release|Any CPU.ActiveCfg = Release|Any CPU

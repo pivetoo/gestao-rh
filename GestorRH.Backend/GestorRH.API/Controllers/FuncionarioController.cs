@@ -39,7 +39,6 @@ namespace GestorRH.API.Controllers
             return Ok(funcionario);
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> PostFuncionario(FuncionarioDTO funcionarioDto)
         {

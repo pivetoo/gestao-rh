@@ -71,6 +71,8 @@ namespace GestorRH.Application.Services
                 Nome = funcionarioDto.Nome,
                 Cpf = funcionarioDto.Cpf,
                 DataNascimento = funcionarioDto.DataNascimento,
+                CargoId = funcionarioDto.CargoId,
+                DepartamentoId = funcionarioDto.DepartamentoId,
                 Email = funcionarioDto.Email,
                 Telefone = funcionarioDto.Telefone,
                 Senha = PasswordHash.HashPassword(funcionarioDto.Senha),
