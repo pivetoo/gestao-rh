@@ -7,6 +7,7 @@
         public string Cpf { get; set; }
         public int CargoId { get; set; }
         public int DepartamentoId { get; set; }
+        public int EnderecoId { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }

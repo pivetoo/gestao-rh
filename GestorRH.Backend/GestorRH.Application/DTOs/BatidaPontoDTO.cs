@@ -7,6 +7,6 @@ namespace GestorRH.Application.DTOs
         public int Id { get; set; }
         public int FuncionarioId { get; set; }
         public DateTime DataHora { get; set; }
-        public string TipoBatida { get; set; }
+        public TipoBatida TipoBatida { get; set; }
     }
 }

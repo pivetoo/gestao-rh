@@ -13,7 +13,7 @@ namespace GestorRH.Dominio.Entities
         public BatidaPonto(int funcionarioId, DateTime dataHora, TipoBatida tipoBatida)
         {
             FuncionarioId = funcionarioId;
-            TipoBatida = tipoBatida;
+            DataHora = dataHora == default ? DateTime.UtcNow : dataHora;
             TipoBatida = tipoBatida;
         }
     }

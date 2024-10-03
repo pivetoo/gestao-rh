@@ -23,7 +23,7 @@ namespace GestorRH.Application.Services
                 Id = b.Id,
                 FuncionarioId = b.FuncionarioId,
                 DataHora = b.DataHora,
-                TipoBatida = b.TipoBatida.ToString()                
+                TipoBatida = b.TipoBatida                
             });
         }
 
@@ -35,13 +35,13 @@ namespace GestorRH.Application.Services
                 Id = b.Id,
                 FuncionarioId = b.FuncionarioId,
                 DataHora = b.DataHora,
-                TipoBatida = b.TipoBatida.ToString()
+                TipoBatida = b.TipoBatida
             });
         }
 
         public async Task AdicionarBatidaPonto(BatidaPontoDTO batidaPontoDto)
         {
-            var batidaPonto = new BatidaPonto(batidaPontoDto.FuncionarioId, batidaPontoDto.DataHora, Enum.Parse<TipoBatida>(batidaPontoDto.TipoBatida));
+            var batidaPonto = new BatidaPonto(batidaPontoDto.FuncionarioId, batidaPontoDto.DataHora, batidaPontoDto.TipoBatida);
             await _batidaPontoRepository.Adicionar(batidaPonto);
         }
 
@@ -51,7 +51,7 @@ namespace GestorRH.Application.Services
             if (batidaPonto != null)
             {
                 batidaPonto.DataHora = batidaPontoDto.DataHora;
-                batidaPonto.TipoBatida = Enum.Parse<TipoBatida>(batidaPontoDto.TipoBatida);
+                batidaPonto.TipoBatida = batidaPontoDto.TipoBatida;
             }
 
             await _batidaPontoRepository.Atualizar(batidaPonto);

@@ -23,9 +23,12 @@ namespace GestorRH.Application.Services
                 Id = f.Id,
                 Nome = f.Nome,
                 Cpf = f.Cpf,
+                CargoId = f.CargoId,
+                EnderecoId = f.EnderecoId,
                 DataNascimento = f.DataNascimento,
                 Email = f.Email,
-                Telefone = f.Telefone
+                Telefone = f.Telefone,
+                IsAdmin = f.IsAdmin
             });
         }
 
@@ -40,7 +43,10 @@ namespace GestorRH.Application.Services
                 Cpf = funcionario.Cpf,
                 DataNascimento = funcionario.DataNascimento,
                 Email = funcionario.Email,
-                Telefone = funcionario.Telefone
+                Telefone = funcionario.Telefone,
+                CargoId = funcionario.CargoId,
+                DepartamentoId = funcionario.DepartamentoId,
+                EnderecoId = funcionario.EnderecoId
             };
         }
 
@@ -60,7 +66,10 @@ namespace GestorRH.Application.Services
                 Cpf = funcionario.Cpf,
                 DataNascimento = funcionario.DataNascimento,
                 Email = funcionario.Email,
-                Telefone = funcionario.Telefone
+                Telefone = funcionario.Telefone,
+                CargoId = funcionario.CargoId,
+                DepartamentoId = funcionario.DepartamentoId,
+                EnderecoId = funcionario.EnderecoId
             };
         }
 
@@ -73,6 +82,7 @@ namespace GestorRH.Application.Services
                 DataNascimento = funcionarioDto.DataNascimento,
                 CargoId = funcionarioDto.CargoId,
                 DepartamentoId = funcionarioDto.DepartamentoId,
+                EnderecoId = funcionarioDto.EnderecoId,
                 Email = funcionarioDto.Email,
                 Telefone = funcionarioDto.Telefone,
                 Senha = PasswordHash.HashPassword(funcionarioDto.Senha),

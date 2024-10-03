@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorRH.Application", "Ges
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorRH.IoC", "GestorRH.IoC\GestorRH.IoC.csproj", "{A13D2A2A-7B71-4E18-8AFE-895324E45723}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorRH.UnitTests", "GestorRH.UnitTests\GestorRH.UnitTests.csproj", "{213C1E8B-47F0-455C-BDCD-12EB6868E998}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A13D2A2A-7B71-4E18-8AFE-895324E45723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A13D2A2A-7B71-4E18-8AFE-895324E45723}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A13D2A2A-7B71-4E18-8AFE-895324E45723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{213C1E8B-47F0-455C-BDCD-12EB6868E998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213C1E8B-47F0-455C-BDCD-12EB6868E998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213C1E8B-47F0-455C-BDCD-12EB6868E998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213C1E8B-47F0-455C-BDCD-12EB6868E998}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

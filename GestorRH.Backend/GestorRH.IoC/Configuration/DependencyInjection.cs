@@ -17,11 +17,13 @@ namespace GestorRH.IoC.Configuration
             services.AddScoped<IDepartamentoRepository, DepartamentoRepository>();
             services.AddScoped<ICargoRepository, CargoRepository>();
             services.AddScoped<IBatidaPontoRepository, BatidaPontoRepository>();
+            services.AddScoped<IEnderecoRepository, EnderecoRepository>();
 
             services.AddScoped<IFuncionarioService, FuncionarioService>();
             services.AddScoped<IDepartamentoService, DepartamentoService>();
             services.AddScoped<ICargoService, CargoService>();
             services.AddScoped<IBatidaPontoService, BatidaPontoService>();
+            services.AddScoped<IEnderecoService, EnderecoService>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
