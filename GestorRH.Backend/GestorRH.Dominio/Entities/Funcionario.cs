@@ -16,8 +16,9 @@ namespace GestorRH.Dominio.Entities
         public int DepartamentoId { get; set; }
         public Departamento Departamento { get; set; }
         public Endereco Endereco { get; set; }
+        public int EnderecoId { get; set; }
         public bool IsAdmin { get; set; }
-        public ICollection<BatidaPonto> BatidasPonto { get; private set; }
+        public ICollection<BatidaPonto> BatidasPonto { get; set; } = new List<BatidaPonto>();
 
         public void RegistrarPonto(DateTime dataHora, TipoBatida tipoBatida)
         {
